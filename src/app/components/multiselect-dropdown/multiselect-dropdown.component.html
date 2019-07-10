@@ -1,0 +1,10 @@
+
+        <ng-multiselect-dropdown
+            name="city"
+            [placeholder]="'Select City'"
+            [data]="cities"
+            formControlName="city"
+            [disabled]="disabled"
+            [settings]="dropdownSettings"
+            (onSelect)="onItemSelect($event)">
+        </ng-multiselect-dropdown>
