@@ -10,19 +10,28 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MultiselectDropdownComponent } from './components/multiselect-dropdown/multiselect-dropdown.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { CreateUserComponent } from './components/create-user/create-user.component';
+import { AssignRoleComponent } from './components/assign-role/assign-role.component';
+import { CommonModule } from '@angular/common';
 
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    
     DashboardComponent,
     SidebarComponent,
     HeaderComponent,
     FooterComponent,
-    MultiselectDropdownComponent
+    MultiselectDropdownComponent,
+    CreateUserComponent,
+    AssignRoleComponent
   ],
   imports: [
+    FormsModule,
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     NgMultiSelectDropDownModule.forRoot()

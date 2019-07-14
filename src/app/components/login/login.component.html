@@ -4,22 +4,29 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <h5 class="card-title text-center">Sign In</h5>
-            <form class="form-signin">
+            <form class="form-signin" #formname="ngForm" (ngSubmit)="loginFunc(formname.value)">
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control inputStyle" value="abc@gmail.com" placeholder="Email address" required autofocus>
+                  <input type="text" name="username" class="form-control inputStyle" placeholder="Email" [(ngModel)]="name"  type="text"
+                  #username="ngModel" required>
               </div>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control inputStyle" value="12345" placeholder="Password" required>
-              </div>
+                  <!-- <input type="text" name="password" class="form-control inputStyle" placeholder="email" [(ngModel)]="pwd"  type="text"
+                  #pwd="ngModel" required> -->
+            
+                  <input type="password" class="form-control inputStyle" placeholder="Password"  name="password" [(ngModel)]="password"  />
+                </div>
 
               <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                 <label class="custom-control-label" for="customCheck1">Remember password</label>
               </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase"  (click)="onClickLoginButton()" type="submit">Sign in</button>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase"   type="submit">Sign in</button>
               <hr class="my-4">
              </form>
+
+
+             
           </div>
         </div>
       </div>

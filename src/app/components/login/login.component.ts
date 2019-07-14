@@ -20,4 +20,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/dashboard']);
    
   }
+  loginFunc(value){
+console.log(value)
+  }
 }
